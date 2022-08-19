@@ -30,20 +30,6 @@
     "target": "_blank"
   },
   {
-    "id": 4,
-    "name": "Interactive Comment Section",
-    "img": [
-      { "0": "./images/interactive-cs.jpg" },
-      { "1": "./images/interactive-cs1.jpg" }
-    ],
-    "tags": ["React JS", "Localstorage"],
-    "text": "This is an interactive comment section. Users can add, edit and delete their comments. They can also upvote or downvote the comments of others. ",
-    "github": "https://github.com/faithandjs/interactive-comments-section-",
-    "live": "https://frontendmentor-interactive-comments-section.netlify.app/",
-    "target": "_blank"
-  },
-
-  {
     "id": 5,
     "name": "Ip Address Tracker",
     "img": [{ "0": "./images/ip-address-tracker.jpg" }],
@@ -51,16 +37,6 @@
     "text": "This is an address tracker.  Users can get the data of a region by inputing the IP address of that location.",
     "github": "https://github.com/faithandjs/ip-address-tracker",
     "live": "https://onosedeba.netlify.app/",
-    "target": "_self"
-  },
-  {
-    "id": 6,
-    "name": "My Portfolio",
-    "img": [{ "0": "./images/portfolio.jpg" }],
-    "tags": ["SASS", "React JS", "JSON"],
-    "text": "This is my portfolio that I designed, you are already previewing the live site😊 It was created with React, SASS and I created JSON file for this project.",
-    "github": "https://github.com/faithandjs/my-portfolio",
-    "live": "https://faithh.netlify.app/",
     "target": "_self"
   }
 ]
