@@ -13,11 +13,16 @@ import Card from "./card";
 export const Home = () => {
   const data = useRef<dataProp[]>(require("./data.json"));
   const [onDisplay, setOnDisplay] = useState<dataProp>(data.current[0]);
+  const [Img, setImg] = useState<boolean>(true);
   const { id, name, img, target, github, live, tags, text } = onDisplay;
 
   useEffect(() => {
-    console.log(data.current, onDisplay);
-  });
+    console.log(window.self === window.top);
+    const frame = document.querySelector("iframe")!;
+    // frame.contentWindow!.onload = () => {
+    //   // setImg(false);
+    // };
+  }, [onDisplay]);
   const settingDisplay = (id: number) => {
     setOnDisplay(data.current[id]);
   };
@@ -119,12 +124,26 @@ export const Home = () => {
           <div className="display-box">
             <div className="display">
               <div className="img-box1">
-                <img src={img[0][0]} alt={"image of" + name + "website"} />
+                <img
+                  src={img[0][0]}
+                  alt={"image of" + name + "website"}
+                  style={{ display: id === 1 ? "block" : "none" }}
+                />
+                <iframe
+                  src={live}
+                  title={name}
+                  frameBorder="0"
+                  sandbox="allow-scripts allow-popups allow-top-navigation-by-user-activation allow-forms allow-same-origin"
+                  allowFullScreen
+                  style={{
+                    display: id === 1 ? "none" : "block",
+                    width: "100%",
+                    borderRadius: "1px ",
+                    pointerEvents: "auto",
+                    backgroundColor: "rgb(25, 25, 25)",
+                  }}
+                ></iframe>
               </div>
-              {/* <iframe
-                src={img[0][0]}
-                title={"image of" + name + "website"}
-              ></iframe> */}
 
               <div className="details">
                 <div className="top">
@@ -148,7 +167,6 @@ export const Home = () => {
             <div className="slider">
               {data.current.map((item, index) => {
                 const { img, name } = item;
-                const className = "img-box" + console.log(id, item.id);
                 return (
                   <img
                     key={index}
@@ -160,24 +178,6 @@ export const Home = () => {
                   />
                 );
               })}
-              {/* <>
-                {data.current.map((item, index) => {
-                  const { img, name } = item;
-                  return (
-                    <div
-                      key={index}
-                      className="img-box"
-                      title={name}
-                      onClick={() => settingDisplay(index)}
-                    >
-                      <img
-                        src={img[0][0]}
-                        alt={"image of" + name + "website"}
-                      />
-                    </div>
-                  );
-                })}
-              </> */}
             </div>
           </div>
         </div>

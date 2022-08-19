@@ -36,7 +36,7 @@
     "tags": ["React JS"],
     "text": "This is an address tracker.  Users can get the data of a region by inputing the IP address of that location.",
     "github": "https://github.com/faithandjs/ip-address-tracker",
-    "live": "https://onosedeba.netlify.app/",
-    "target": "_self"
+    "live": "https://frontendmentor00ip-address-tracker.netlify.app/",
+    "target": "_blank"
   }
 ]
