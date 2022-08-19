@@ -1,0 +1,66 @@
+[
+  {
+    "id": 1,
+    "name": "Vivienne Daniels Store",
+    "img": [{ "0": "./images/VD.PNG" }],
+    "tags": ["SASS", "Gatsby JS", "shopify", "context API"],
+    "text": "This is an online shopping website I designed and developed. Users can browse products, add multiple quantities of diffrent variants to cart, update their wishlist and checkout items.",
+    "github": "https://github.com/faithandjs/vivienne-daniels-store",
+    "live": "https://viviennedanielsstoremain.gatsbyjs.io/",
+    "target": "_blank"
+  },
+  {
+    "id": 2,
+    "name": "Where in the World",
+    "img": [{ "0": "./images/REST-countries-api.jpg" }],
+    "tags": ["SASS", "React JS", "Context API", "axios", "typescript"],
+    "text": "This is a website that calls a REST API which returns data about the countries of the world. Users preview diffrent countries' flags and names and can search for countries by name",
+    "github": "https://github.com/faithandjs/rest-countries-api",
+    "live": "https://fe-rest-countries-api.netlify.app/",
+    "target": "_blank"
+  },
+  {
+    "id": 3,
+    "name": "Rock, Paper, Scissors ( Lizard, Spork )",
+    "img": [{ "0": "./images/rpsls.jpg" }],
+    "tags": ["SASS", "React JS", "typescript", "Localstorage"],
+    "text": "This is adaptation of the Rock, Paper, Scissors game. Users can play against the computer by clicking the icons.",
+    "github": "https://github.com/faithandjs/rock-paper-scissors",
+    "live": "https://rock-paper-scissors-lizard-spock-fe.netlify.app/",
+    "target": "_blank"
+  },
+  {
+    "id": 4,
+    "name": "Interactive Comment Section",
+    "img": [
+      { "0": "./images/interactive-cs.jpg" },
+      { "1": "./images/interactive-cs1.jpg" }
+    ],
+    "tags": ["React JS", "Localstorage"],
+    "text": "This is an interactive comment section. Users can add, edit and delete their comments. They can also upvote or downvote the comments of others. ",
+    "github": "https://github.com/faithandjs/interactive-comments-section-",
+    "live": "https://frontendmentor-interactive-comments-section.netlify.app/",
+    "target": "_blank"
+  },
+
+  {
+    "id": 5,
+    "name": "Ip Address Tracker",
+    "img": [{ "0": "./images/ip-address-tracker.jpg" }],
+    "tags": ["React JS"],
+    "text": "This is an address tracker.  Users can get the data of a region by inputing the IP address of that location.",
+    "github": "https://github.com/faithandjs/ip-address-tracker",
+    "live": "https://onosedeba.netlify.app/",
+    "target": "_self"
+  },
+  {
+    "id": 6,
+    "name": "My Portfolio",
+    "img": [{ "0": "./images/portfolio.jpg" }],
+    "tags": ["SASS", "React JS", "JSON"],
+    "text": "This is my portfolio that I designed, you are already previewing the live site😊 It was created with React, SASS and I created JSON file for this project.",
+    "github": "https://github.com/faithandjs/my-portfolio",
+    "live": "https://faithh.netlify.app/",
+    "target": "_self"
+  }
+]
