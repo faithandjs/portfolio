@@ -135,6 +135,7 @@ export const Home = () => {
                   frameBorder="0"
                   sandbox="allow-scripts allow-popups allow-top-navigation-by-user-activation allow-forms allow-same-origin"
                   allowFullScreen
+                  // scrolling="no"
                   style={{
                     display: id === 1 ? "none" : "block",
                     width: "100%",
