@@ -124,11 +124,6 @@ export const Home = () => {
           <div className="display-box">
             <div className="display">
               <div className="img-box1">
-                <img
-                  src={img[0][0]}
-                  alt={"image of" + name + "website"}
-                  style={{ display: id === 1 ? "block" : "none" }}
-                />
                 <iframe
                   src={live}
                   title={name}
@@ -137,7 +132,6 @@ export const Home = () => {
                   allowFullScreen
                   // scrolling="no"
                   style={{
-                    display: id === 1 ? "none" : "block",
                     width: "100%",
                     borderRadius: "1px ",
                     pointerEvents: "auto",
