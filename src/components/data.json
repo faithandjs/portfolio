@@ -1,6 +1,16 @@
 [
   {
     "id": 1,
+    "name": "My Vision Board",
+    "img": [{ "0": "./images/vision_board.png" }],
+    "tags": ["SASS", "CSS Grid", "animation", "context API"],
+    "text": "This is vision board application that has the default vision board view and individual goals/visions with details when flipped over .",
+    "github": "https://github.com/faithandjs/vivienne-daniels-store",
+    "live": "https://vision-board-2023.netlify.app/",
+    "target": "_blank"
+  },
+  {
+    "id": 2,
     "name": "Vivienne Daniels Store",
     "img": [{ "0": "./images/VD.PNG" }],
     "tags": ["SASS", "Gatsby JS", "shopify", "context API"],
@@ -10,7 +20,7 @@
     "target": "_blank"
   },
   {
-    "id": 2,
+    "id": 3,
     "name": "Where in the World",
     "img": [{ "0": "./images/REST-countries-api.jpg" }],
     "tags": ["SASS", "React JS", "Context API", "axios", "typescript"],
@@ -20,7 +30,7 @@
     "target": "_blank"
   },
   {
-    "id": 3,
+    "id": 4,
     "name": "Rock, Paper, Scissors ( Lizard, Spork )",
     "img": [{ "0": "./images/rpsls.jpg" }],
     "tags": ["SASS", "React JS", "typescript", "Localstorage"],
@@ -40,3 +50,4 @@
     "target": "_blank"
   }
 ]
+
