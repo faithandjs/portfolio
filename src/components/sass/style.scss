@@ -1,5 +1,5 @@
-@import url("https://fonts.googleapis.com/css2?family=Rubik+Puddles&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Puddles&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
 
 $pink: #ffa4c2;
 $pink-light: #ffa4c2bd;
@@ -88,10 +88,11 @@ body {
     position: relative;
     margin: auto auto 20px;
     min-width: 278px;
-    font-family: "Cormorant Garamond", serif;
+    font-family: 'Cormorant Garamond', serif;
 
     .introduction {
-      max-width: 1300px;
+      max-width: 100rem;
+      margin: auto;
       text-align: left;
       display: flex;
       justify-content: space-between;
@@ -109,7 +110,7 @@ body {
             margin: 9vh 0 5vh;
             .hi {
               text-shadow: 0 0 5px $pink;
-              font-family: "Rubik Puddles", cursive, Copperplate, Papyrus,
+              font-family: 'Rubik Puddles', cursive, Copperplate, Papyrus,
                 fantasy;
               text-transform: capitalize;
               color: $pink;
@@ -218,10 +219,10 @@ body {
 
       .image {
         min-width: 200px;
-        max-width: 300px;
+        // max-width: 300px;
         padding: 0px 2vw 0 20px;
-        margin-top: 22vh;
-
+        margin-top: 12rem;
+        filter: brightness(0.5);
         img {
           margin: auto;
           width: -moz-available;
@@ -244,7 +245,7 @@ body {
           width: max-content;
           margin: auto;
           &::after {
-            content: "";
+            content: '';
             position: absolute;
             background-color: $pink;
             left: 0;
@@ -340,7 +341,7 @@ body {
                 width: 25vw;
                 margin: 7px 0;
                 &::after {
-                  content: "";
+                  content: '';
                   position: absolute;
                   background-color: #0000005e;
                   left: 0;
@@ -544,3 +545,4 @@ body {
     }
   }
 }
+
