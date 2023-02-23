@@ -222,7 +222,7 @@ body {
         // max-width: 300px;
         padding: 0px 2vw 0 20px;
         margin-top: 19rem;
-
+        filter: brightness(0.7);
         img {
           margin: auto;
           width: -moz-available;
@@ -302,7 +302,7 @@ body {
                   }
                 }
                 p {
-                  font-size: 1.25rem;
+                  font-size: 1.5rem;
                   padding: 3px 0 6px;
                 }
                 ul {
@@ -318,7 +318,7 @@ body {
                     padding: 5px 6px;
                     border-radius: 3px;
                     color: $text;
-                    font-size: 1.1rem;
+                    font-size: 1.3rem;
                     background-color: hsla(0, 0%, 15%, 0.651);
                     white-space: nowrap;
                   }

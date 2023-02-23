@@ -8,7 +8,6 @@ import email from './images/email.png';
 import './sass/style.scss';
 import { dataProp } from '../../type';
 import play from './images/play.png';
-import Card from './card';
 
 export const Home = () => {
   const data = useRef<dataProp[]>(require('./data.json'));
@@ -55,7 +54,7 @@ export const Home = () => {
                 {/*In my free time, I enjoy reading, watching movies or exercising.
              <li>I manage and maintain websites.</li> */}
               </ul>
-            </div>{' '}
+            </div>
             <br />
             <div className='skills'>
               <div className='technical'>
@@ -68,13 +67,15 @@ export const Home = () => {
                   <li>
                     <span className='header'>Libraries/Tools:</span>
                     <span>
-                      {' '}
                       Gatsby Js, Next Js, React, Bootstrap, Git/Github.
                     </span>
                   </li>
                   <li>
                     <span className='header'>Concepts:</span>
-                    <span> GraphQL, Redux, RESTful APIs, Context API.</span>
+                    <span>
+                      GraphQL, Redux Toolkit, RESTful APIs, Context API, API
+                      Implementation.
+                    </span>
                   </li>
                 </ul>
               </div>
@@ -84,7 +85,7 @@ export const Home = () => {
                   <li className="item">video editing.</li>
                 </ul>
               </div> */}
-            </div>{' '}
+            </div>
             <br />
           </div>
           <ul className='contact'>
