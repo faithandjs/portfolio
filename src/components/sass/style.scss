@@ -79,7 +79,7 @@ html {
 }
 body {
   min-width: 310px;
-  font-size: 20px;
+  font-size: 24px;
   background-color: #02000c;
   background-attachment: fixed;
 
@@ -100,7 +100,7 @@ body {
       font-weight: 100;
       .texts {
         padding-right: 20px;
-        max-width: 500px;
+        max-width: 550px;
 
         .h1 {
           display: flex;
@@ -221,8 +221,8 @@ body {
         min-width: 200px;
         // max-width: 300px;
         padding: 0px 2vw 0 20px;
-        margin-top: 12rem;
-        filter: brightness(0.5);
+        margin-top: 19rem;
+
         img {
           margin: auto;
           width: -moz-available;
@@ -542,6 +542,23 @@ body {
       //     }
       //   }
       // }
+    }
+  }
+}
+@media only screen and (min-width: 1200px) {
+  body {
+    .body {
+      .introduction {
+        .texts {
+          // max-width: 100%;
+          .text {
+            // display: flex;
+          }
+        }
+        .image {
+          // display: ;
+        }
+      }
     }
   }
 }
