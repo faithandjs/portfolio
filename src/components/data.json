@@ -11,6 +11,16 @@
   },
   {
     "id": 2,
+    "name": "Reward.io",
+    "img": [{ "0": "./images/reward-io.png" }],
+    "tags": ["Vue", "typescript"],
+    "text": "",
+    "github": "https://github.com/faithandjs/reward.io",
+    "live": "https://reward-io.netlify.app/",
+    "target": "_blank"
+  },
+  {
+    "id": 3,
     "name": "Vivienne Daniels Store",
     "img": [{ "0": "./images/VD.PNG" }],
     "tags": ["SASS", "Gatsby JS", "shopify", "context API"],
@@ -19,18 +29,19 @@
     "live": "https://viviennedanielsstore.netlify.app/",
     "target": "_blank"
   },
+
   {
-    "id": 3,
-    "name": "Where in the World",
-    "img": [{ "0": "./images/REST-countries-api.jpg" }],
-    "tags": ["SASS", "React JS", "Context API", "axios", "typescript"],
-    "text": "This is a website that calls a REST API which returns data about the countries of the world. Users preview diffrent countries' flags and names and can search for countries by name",
-    "github": "https://github.com/faithandjs/rest-countries-api",
-    "live": "https://fe-rest-countries-api.netlify.app/",
+    "id": 4,
+    "name": "Freebies--Coworking Space",
+    "img": [{ "0": "./images/freebies.png" }],
+    "tags": ["Gatsby JS", "typescript", "tailwindcss"],
+    "text": "This a single page application created with Gatsby Js and Tailwind css",
+    "github": "https://github.com/faithandjs/Freebies---Coworking-Space-landing-page",
+    "live": "https://freebies-coworking-space.netlify.app/",
     "target": "_blank"
   },
   {
-    "id": 4,
+    "id": 5,
     "name": "Rock, Paper, Scissors ( Lizard, Spork )",
     "img": [{ "0": "./images/rpsls.jpg" }],
     "tags": ["SASS", "React JS", "typescript", "Localstorage"],
@@ -40,7 +51,17 @@
     "target": "_blank"
   },
   {
-    "id": 5,
+    "id": 6,
+    "name": "Where in the World",
+    "img": [{ "0": "./images/REST-countries-api.jpg" }],
+    "tags": ["SASS", "React JS", "Context API", "axios", "typescript"],
+    "text": "This is a website that calls a REST API which returns data about the countries of the world. Users preview diffrent countries' flags and names and can search for countries by name",
+    "github": "https://github.com/faithandjs/rest-countries-api",
+    "live": "https://fe-rest-countries-api.netlify.app/",
+    "target": "_blank"
+  },
+  {
+    "id": 7,
     "name": "Ip Address Tracker",
     "img": [{ "0": "./images/ip-address-tracker.jpg" }],
     "tags": ["React JS", "react-leaflet"],
