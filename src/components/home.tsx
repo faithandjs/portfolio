@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { gsap } from 'gsap';
 import SplitType from 'split-type';
 
@@ -11,8 +11,23 @@ import './home.css';
 import './sass/style.scss';
 
 export const Home = () => {
-  // const [menuState, setMenu] = useState(false);
+  const [menuState, setMenu] = useState(false);
+
+  const removeMenu = () => {
+    if (menuState) {
+      const menu = document.querySelector('.menu')!;
+      gsap.to(menu, {
+        duration: 1,
+        y: -300,
+        opacity: 0,
+        height: 0,
+      });
+      setMenu(false);
+    }
+  };
   useEffect(() => {
+    document.addEventListener('scroll', removeMenu);
+
     let ctx = gsap.context(() => {
       const load = gsap.timeline();
       const role = new SplitType('.home h1', { types: 'chars' }).chars;
@@ -60,8 +75,8 @@ export const Home = () => {
       el.addEventListener('mouseover', () => {
         gsap.to(cursor, {
           scale: 1,
-          autoAlpha: 1,
-          opacity: 1,
+          autoAlpha: 0.6,
+          opacity: 0.6,
         });
 
         el.addEventListener('mousemove', moveCircle);
@@ -70,58 +85,53 @@ export const Home = () => {
       el.addEventListener('mouseenter', moveCircle);
       el.addEventListener('mouseout', () => {
         gsap.to(cursor, {
-          scale: 0.5,
+          scale: 0.3,
           autoAlpha: 0,
         });
       });
-      // const menuButton = document.querySelector('nav h4 button')!;
-      // const menu = document.querySelector('nav ul')!;
-
-      // const tl = gsap.timeline({ paused: true });
-
-      // tl.fromTo(
-      //   menu,
-      //   {
-      //     y: -1000,
-      //     opacity: 0,
-      //     height: 0,
-      //   },
-      //   {
-      //     duration: 1,
-      //     opacity: 1,
-      //     yPercent: -100,
-      //     height: '300px',
-      //   }
-      // );
-
-      // menuButton.addEventListener('click', () => {
-      //   if (!menuState) {
-      //     console.log(menuState, 'so play');
-      //     tl.play();
-      //     setMenu(true);
-      //   } else {
-      //     console.log(menuState, 'so reverse');
-      //     tl.reverse();
-      //     setMenu(false);
-      //   }
-      // });
+      //
     });
 
-    return () => ctx.revert();
+    return () => ctx.revert(); // eslint-disable-next-line
   }, []);
   return (
     <div className='body'>
+      <ul className='menu'>
+        {['home', 'about', 'projects', 'contact'].map((item, key) => (
+          <li key={key}>
+            <a href={`#${item}`} className='underline' onClick={removeMenu}>
+              {item}
+            </a>
+          </li>
+        ))}
+      </ul>
       <nav>
         <h4>
-          <button>Faith Okogbo</button>
+          <button
+            onClick={(e) => {
+              e.stopPropagation();
+              const menu = document.querySelector('.menu')!;
+
+              if (!menuState) {
+                gsap.to(menu, {
+                  duration: 1,
+                  opacity: 1,
+                  y: 0,
+                  height: '250px',
+                });
+              } else {
+                gsap.to(menu, {
+                  duration: 1,
+                  y: -250,
+                  opacity: 0,
+                  height: 0,
+                });
+              }
+              setMenu(!menuState);
+            }}>
+            Faith Okogbo
+          </button>
         </h4>
-        <ul>
-          {['home', 'about', 'projects', 'contact'].map((item, key) => (
-            <li key={key}>
-              <a href={`#${item}`}>{item}</a>
-            </li>
-          ))}
-        </ul>
       </nav>
       <section className='home' id='home'>
         <img src={debs} alt='' className='cursor' />
@@ -145,7 +155,7 @@ export const Home = () => {
           <div>
             <h3>
               skills ⎻&nbsp;
-              <a href='okogbo-faith-cv.pdf' download>
+              <a href='okogbo-faith-cv.pdf' download className='underline'>
                 Download CV
               </a>
             </h3>
