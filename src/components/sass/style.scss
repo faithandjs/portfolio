@@ -13,6 +13,7 @@
   padding: 0;
   // transition: all 0.2s ease-out;
   color: #e1e1e1;
+  font-family: 'Cormorant Garamond', serif;
 }
 button {
   border: 0;
@@ -21,6 +22,7 @@ button {
 }
 a,
 button {
+  text-decoration: none;
   &:hover {
     cursor: pointer;
   }
@@ -56,12 +58,11 @@ section {
 }
 
 h3,
-a {
+h3 a {
   text-transform: uppercase;
   font-weight: 900;
   font-size: 3rem;
   color: $main;
-  text-decoration: none;
   padding: 1.2rem 0;
   line-height: 0.95;
   letter-spacing: 0.02em;
@@ -71,9 +72,22 @@ nav {
   text-align: center;
   padding: 2rem 0;
   opacity: 0;
-  h4 {
+  h4 button {
     font-size: 1rem;
     text-transform: uppercase;
+  }
+  ul {
+    // transform: translateY(-1000px);
+    // opacity: 0;
+    // height: 0;
+    padding: 2rem 0;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    li a {
+      text-transform: uppercase;
+      // padding: ;
+    }
   }
 }
 .body {
@@ -81,10 +95,9 @@ nav {
   position: relative;
   margin: auto auto 20px;
   min-width: 278px;
-  font-family: 'Cormorant Garamond', serif;
 }
 
-.banner {
+.home {
   cursor: none;
   min-height: unset;
   height: calc(100vh - 4rem);
@@ -139,6 +152,8 @@ nav {
         grid-column: 3/11;
         h3,
         a {
+          display: flex;
+          align-items: center;
           font-size: 1.7rem;
           position: relative;
           width: max-content;
@@ -168,9 +183,15 @@ nav {
     }
   }
   ul {
-    list-style-type: disc;
     li {
       padding: 1rem 0;
+      &::marker {
+        content: '*';
+        font-size: 0.8em;
+        padding-right: 2px;
+        color: $main;
+      }
+
       .header {
         color: $main;
       }
@@ -179,7 +200,7 @@ nav {
 }
 
 @media only screen and (max-width: 1024px) {
-  .banner {
+  .home {
     h1 {
       font-size: 7rem;
     }
@@ -202,7 +223,6 @@ nav {
       }
 
       .slider-box {
-        padding: 1rem 2rem;
         overflow-x: scroll;
         width: 100%;
         margin: 0;
@@ -229,7 +249,7 @@ nav {
 }
 
 @media only screen and (max-width: 768px) {
-  .banner {
+  .home {
     h1 {
       font-size: 5.5rem;
     }
@@ -237,9 +257,13 @@ nav {
   .cursor {
     height: 3.5rem;
   }
-  .about .wrapper {
-    display: flex;
-    flex-direction: column;
+  .about {
+    .wrapper {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+  .work {
   }
 }
 
@@ -251,7 +275,7 @@ nav {
   a {
     font-size: 2.3rem;
   }
-  .banner {
+  .home {
     h1 {
       font-size: 3.5rem;
     }

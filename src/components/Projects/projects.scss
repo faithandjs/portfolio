@@ -35,17 +35,18 @@
     }
     .details {
       text-align: start;
+      padding-top: 1rem;
       .top {
         display: flex;
         justify-content: space-between;
         h3 {
-          font-size: 2rem;
+          font-size: 1.8rem;
           text-decoration: underline;
           text-decoration-color: $main;
           padding: 3px 0;
           position: relative;
           color: white;
-          font-family: 'Cormorant Garamond', serif;
+          text-align: start;
         }
         .img-box2 {
           height: x45px;
@@ -84,7 +85,6 @@
   .slider-box {
     overflow: auto;
     overflow-x: hidden;
-    // margin: 0 15px;
     width: 26vw;
     .slider {
       width: max-content;
