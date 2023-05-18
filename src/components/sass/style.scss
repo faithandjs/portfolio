@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Rubik+Puddles&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
-
+@import url('https://fonts.cdnfonts.com/css/castlery');
 @import 'color.scss';
 @import 'mixin.scss';
 
@@ -15,6 +15,7 @@
   color: #e1e1e1;
   font-family: 'Cormorant Garamond', serif;
 }
+
 button {
   border: 0;
   outline: 0;
@@ -29,6 +30,7 @@ button {
 }
 
 html {
+  scroll-behavior: smooth;
   ::-webkit-scrollbar {
     width: 9px;
   }
@@ -68,33 +70,76 @@ h3 a {
   letter-spacing: 0.02em;
 }
 
-nav {
+.menu {
   text-align: center;
-  padding: 2rem 0;
+  position: absolute;
+  top: 75px;
+  list-style: none;
+  width: 100%;
+  transform: translateY(-300px);
+  background-color: rgba(0, 0, 0, 0.457);
+  overflow: hidden;
   opacity: 0;
-  h4 button {
-    font-size: 1rem;
+  height: 0;
+  padding: 1.2rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  z-index: 1;
+
+  li a {
     text-transform: uppercase;
-  }
-  ul {
-    // transform: translateY(-1000px);
-    // opacity: 0;
-    // height: 0;
-    padding: 2rem 0;
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    li a {
-      text-transform: uppercase;
-      // padding: ;
+    font-size: 1.5rem;
+    color: white;
+    &::after {
+      width: 0;
+      top: 90%;
+    }
+
+    &:hover::after {
+      width: 70%;
     }
   }
 }
+
+a.underline {
+  font-size: 1.2rem;
+  text-transform: none;
+  position: relative;
+  &::after {
+    content: '';
+    position: absolute;
+    width: 70%;
+    height: 1px;
+    background-color: inherit;
+    top: 70%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: $main;
+    transition: all 0.2s ease-out;
+  }
+}
+
 .body {
   height: 100%;
   position: relative;
   margin: auto auto 20px;
   min-width: 278px;
+}
+nav {
+  text-align: center;
+  padding-top: 2rem;
+  opacity: 0;
+  position: relative;
+  // background-color: #02000c;
+  z-index: 2;
+  h4 button {
+    font-family: serif;
+
+    font-size: 1rem;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+  }
 }
 
 .home {
@@ -128,7 +173,7 @@ nav {
   border-radius: 50%;
   background: transparent;
   transform: scale(0);
-  opacity: 0;
+  opacity: 0.6;
 }
 
 .about {
@@ -155,24 +200,11 @@ nav {
           display: flex;
           align-items: center;
           font-size: 1.7rem;
-          position: relative;
           width: max-content;
           color: white;
         }
         a {
           font-size: 1.2rem;
-          text-transform: none;
-          &::after {
-            content: '';
-            position: absolute;
-            width: 70%;
-            height: 1px;
-            background-color: inherit;
-            top: 70%;
-            left: 0;
-            background-color: $main;
-            transition: all 0.2s ease-out;
-          }
         }
         h3:hover {
           a::after {
@@ -262,8 +294,6 @@ nav {
       display: flex;
       flex-direction: column;
     }
-  }
-  .work {
   }
 }
 
