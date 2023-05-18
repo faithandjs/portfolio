@@ -1,4 +1,4 @@
-export interface dataProp {
+interface dataProp {
   id: number;
   name: string;
   img: { [key: number]: string }[];
@@ -8,3 +8,4 @@ export interface dataProp {
   live: string;
   target: string;
 }
+
