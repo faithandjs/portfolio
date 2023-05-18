@@ -1,18 +1,21 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import SplitType from 'split-type';
-import './home.css';
 
-import debs from './images/deba.gif';
 import Projects from './Projects';
 import Contact from './Contact';
+
+import debs from './images/deba.gif';
+
+import './home.css';
 import './sass/style.scss';
 
 export const Home = () => {
   gsap.registerPlugin(ScrollTrigger);
-  const [mouseMove, setMouseMove] = useState(false);
+
   // idea 💡 make the role display the video and on hover, create a cursor that is the video in a circle
+
   useEffect(() => {
     let ctx = gsap.context(() => {
       const load = gsap.timeline();
