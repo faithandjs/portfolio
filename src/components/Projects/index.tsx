@@ -1,13 +1,14 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useRef, useState } from 'react';
+
 import play from '../images/play.png';
+
 import './projects.scss';
 
-export default function Index({}: {}) {
+export default function Index() {
   const data = useRef<dataProp[]>(require('../data.json'));
   const [onDisplay, setOnDisplay] = useState<dataProp>(data.current[0]);
-  const [Img, setImg] = useState<null | string>(null);
 
-  const { id, name, img, target, github, live, tags, text } = onDisplay;
+  const { id, name, img, target, live, tags, text } = onDisplay;
 
   return (
     <section className='work'>
