@@ -1,6 +1,5 @@
 import React, { useEffect } from 'react';
 import { gsap } from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import SplitType from 'split-type';
 
 import Projects from './Projects';
@@ -12,14 +11,11 @@ import './home.css';
 import './sass/style.scss';
 
 export const Home = () => {
-  gsap.registerPlugin(ScrollTrigger);
-
-  // idea 💡 make the role display the video and on hover, create a cursor that is the video in a circle
-
+  // const [menuState, setMenu] = useState(false);
   useEffect(() => {
     let ctx = gsap.context(() => {
       const load = gsap.timeline();
-      const role = new SplitType('.banner h1', { types: 'chars' }).chars;
+      const role = new SplitType('.home h1', { types: 'chars' }).chars;
       load
         .fromTo(
           'nav',
@@ -48,15 +44,11 @@ export const Home = () => {
             duration: 2,
             ease: 'power4.out',
           }
-        )
-        .to('.gif-box img', {
-          opacity: 1,
-        });
-      const el = document.querySelector('.banner')!;
+        );
+
+      const el = document.querySelector('.home')!;
       const cursor = document.querySelector('.cursor');
       const moveCircle = (e: any) => {
-        // console.log(e);
-        // e.type !== 'mousemove' && console.log(e);
         gsap.to(cursor, {
           css: {
             left: e.pageX - 50,
@@ -82,6 +74,37 @@ export const Home = () => {
           autoAlpha: 0,
         });
       });
+      // const menuButton = document.querySelector('nav h4 button')!;
+      // const menu = document.querySelector('nav ul')!;
+
+      // const tl = gsap.timeline({ paused: true });
+
+      // tl.fromTo(
+      //   menu,
+      //   {
+      //     y: -1000,
+      //     opacity: 0,
+      //     height: 0,
+      //   },
+      //   {
+      //     duration: 1,
+      //     opacity: 1,
+      //     yPercent: -100,
+      //     height: '300px',
+      //   }
+      // );
+
+      // menuButton.addEventListener('click', () => {
+      //   if (!menuState) {
+      //     console.log(menuState, 'so play');
+      //     tl.play();
+      //     setMenu(true);
+      //   } else {
+      //     console.log(menuState, 'so reverse');
+      //     tl.reverse();
+      //     setMenu(false);
+      //   }
+      // });
     });
 
     return () => ctx.revert();
@@ -89,16 +112,25 @@ export const Home = () => {
   return (
     <div className='body'>
       <nav>
-        <h4>Faith Okogbo</h4>
+        <h4>
+          <button>Faith Okogbo</button>
+        </h4>
+        <ul>
+          {['home', 'about', 'projects', 'contact'].map((item, key) => (
+            <li key={key}>
+              <a href={`#${item}`}>{item}</a>
+            </li>
+          ))}
+        </ul>
       </nav>
-      <section className='banner'>
+      <section className='home' id='home'>
         <img src={debs} alt='' className='cursor' />
         <h1>
           FRONTEND <br />
           DEVELOPER
         </h1>
       </section>
-      <section className='about'>
+      <section className='about' id='about'>
         <div className='wrapper'>
           <div>
             <h3>About me</h3>
@@ -112,7 +144,7 @@ export const Home = () => {
           </div>
           <div>
             <h3>
-              skills -&nbsp;
+              skills ⎻&nbsp;
               <a href='okogbo-faith-cv.pdf' download>
                 Download CV
               </a>

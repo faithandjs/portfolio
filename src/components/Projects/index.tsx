@@ -11,7 +11,7 @@ export default function Index() {
   const { id, name, img, target, live, tags, text } = onDisplay;
 
   return (
-    <section className='work'>
+    <section className='work' id='projects'>
       <h3>PROJECTS</h3>
 
       <div className='gallery'>
