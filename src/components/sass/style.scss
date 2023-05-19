@@ -92,12 +92,7 @@ h3 a {
     font-size: 1.5rem;
     color: white;
     &::after {
-      width: 0;
       top: 90%;
-    }
-
-    &:hover::after {
-      width: 70%;
     }
   }
 }
@@ -109,7 +104,7 @@ a.underline {
   &::after {
     content: '';
     position: absolute;
-    width: 70%;
+    width: 0;
     height: 1px;
     background-color: inherit;
     top: 70%;
@@ -117,6 +112,9 @@ a.underline {
     transform: translateX(-50%);
     background-color: $main;
     transition: all 0.2s ease-out;
+  }
+  &:hover::after {
+    width: 70%;
   }
 }
 
@@ -143,7 +141,7 @@ nav {
 }
 
 .home {
-  cursor: none;
+  // cursor: none;
   min-height: unset;
   height: calc(100vh - 4rem);
   padding-left: 1vw;
@@ -159,6 +157,18 @@ nav {
     font-size: 12rem;
   }
 }
+img.cursor {
+  height: 7rem;
+  border-radius: 50%;
+  opacity: 0.6;
+}
+div.cursor {
+  border-radius: 50%;
+  width: 130px;
+  height: 130px;
+  background-color: #ffffff;
+  z-index: 1;
+}
 .cursor {
   transition: none;
   pointer-events: none;
@@ -169,11 +179,9 @@ nav {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 7rem;
   border-radius: 50%;
   background: transparent;
   transform: scale(0);
-  opacity: 0.6;
 }
 
 .about {
@@ -205,11 +213,6 @@ nav {
         }
         a {
           font-size: 1.2rem;
-        }
-        h3:hover {
-          a::after {
-            width: 10%;
-          }
         }
       }
     }
