@@ -1,6 +1,23 @@
 [
   {
     "id": 1,
+    "name": "Vivienne Daniels Store",
+    "img": [{ "0": "./images/VD.png" }],
+    "tags": [
+      "SASS",
+      "Gatsby JS",
+      "shopify",
+      "context API",
+      "Paystack Integration"
+    ],
+    "text": "This is an online shopping website I designed and developed. Users can browse products, add multiple quantities of diffrent variants to cart, update their wishlist and checkout items.",
+    "github": "https://github.com/faithandjs/vivienne-daniels-store",
+    "live": "https://viviennedanielsstore.netlify.app/",
+    "target": "_blank"
+  },
+
+  {
+    "id": 2,
     "name": "My Vision Board",
     "img": [{ "0": "./images/vision_board.png" }],
     "tags": ["SASS", "CSS Grid", "animation", "context API"],
@@ -10,31 +27,20 @@
     "target": "_blank"
   },
   {
-    "id": 2,
+    "id": 3,
     "name": "Reward.io",
-    "img": [{ "0": "./images/reward-io.png" }],
-    "tags": ["Vue", "typescript"],
-    "text": "",
+    "img": [{ "0": "./images/reward-io.png", "1": "./images/reward.io.png" }],
+    "tags": ["Vue", "typescript", "Desktop only"],
+    "text": "This is a crypto reward website. It is a single page application created with Vue js",
     "github": "https://github.com/faithandjs/reward.io",
     "live": "https://reward-io.netlify.app/",
     "target": "_blank"
   },
   {
-    "id": 3,
-    "name": "Vivienne Daniels Store",
-    "img": [{ "0": "./images/VD.PNG" }],
-    "tags": ["SASS", "Gatsby JS", "shopify", "context API"],
-    "text": "This is an online shopping website I designed and developed. Users can browse products, add multiple quantities of diffrent variants to cart, update their wishlist and checkout items.",
-    "github": "https://github.com/faithandjs/vivienne-daniels-store",
-    "live": "https://viviennedanielsstore.netlify.app/",
-    "target": "_blank"
-  },
-
-  {
     "id": 4,
     "name": "Freebies--Coworking Space",
-    "img": [{ "0": "./images/freebies.png" }],
-    "tags": ["Gatsby JS", "typescript", "tailwindcss"],
+    "img": [{ "0": "./images/freebies.png", "1": "./images/freebies-ext.png" }],
+    "tags": ["Gatsby JS", "typescript", "tailwindcss", "Desktop only"],
     "text": "This a single page application created with Gatsby Js and Tailwind css",
     "github": "https://github.com/faithandjs/Freebies---Coworking-Space-landing-page",
     "live": "https://freebies-coworking-space.netlify.app/",
@@ -58,16 +64,6 @@
     "text": "This is a website that calls a REST API which returns data about the countries of the world. Users preview diffrent countries' flags and names and can search for countries by name",
     "github": "https://github.com/faithandjs/rest-countries-api",
     "live": "https://fe-rest-countries-api.netlify.app/",
-    "target": "_blank"
-  },
-  {
-    "id": 7,
-    "name": "Ip Address Tracker",
-    "img": [{ "0": "./images/ip-address-tracker.jpg" }],
-    "tags": ["React JS", "react-leaflet"],
-    "text": "This is an address tracker.  Users can get the data of a region by inputing the IP address of that location.",
-    "github": "https://github.com/faithandjs/ip-address-tracker",
-    "live": "https://frontendmentor00ip-address-tracker.netlify.app/",
     "target": "_blank"
   }
 ]
