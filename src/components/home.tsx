@@ -114,7 +114,7 @@ export const Home = () => {
   return (
     <div className='body'>
       <ul className='menu'>
-        {['home', 'about', 'projects', 'contact'].map((item, key) => (
+        {['about', 'projects', 'contact'].map((item, key) => (
           <li key={key}>
             <a href={`#${item}`} className='underline' onClick={removeMenu}>
               {item}
