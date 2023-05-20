@@ -69,15 +69,16 @@ export const Home = () => {
       const cursorCircle = document.querySelector('div.cursor');
       const moveCircle = (e: any) => {
         gsap.to(cursorImg, {
+          duration: 2,
           css: {
-            left: e.pageX,
-            top: e.pageY,
+            left: e.pageX + 50,
+            top: e.pageY + 50,
           },
         });
         gsap.to(cursorCircle, {
           css: {
-            left: e.pageX - 50,
-            top: e.pageY - 150,
+            left: e.pageX,
+            top: e.pageY - 80,
           },
         });
       };
@@ -163,17 +164,24 @@ export const Home = () => {
         <div className='wrapper'>
           <div>
             <h3>About me</h3>
-            I've always been captivated by the art of bringing stunning web
+            {/* I've always been captivated by the art of bringing stunning web
             designs to life as actual websites and this fascination led me to
-            frontend development.
+            frontend development. */}
+            I am a detail-oriented, result-driven front-end developer with over
+            2 years of experience in building web applications. Equipped with a
+            degree in computer science, my expertise lies in utilizing popular
+            front-end frameworks and technologies such as React.js, Vue.js, etc.
+            I possess a strong understanding of object-oriented programming
+            principles, allowing me to create responsive, feature-rich, and
+            scalable interfaces for web applications.
             <br />
             <br />
-            Frontend development to me is a rewarding cycle of learning and
+            {/* Frontend development to me is a rewarding cycle of learning and
             applying knowledge to produce results. While my computer science
             degree has given me a strong foundation in the basics and equipped
             me with valuable skills that I apply in my work, I am always open to
             new challenges and opportunities to learn, grow and expand my
-            skillset.
+            skillset. */}
           </div>
           <div>
             <h3>
