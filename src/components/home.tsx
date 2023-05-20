@@ -1,189 +1,217 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useEffect, useState } from 'react';
+import { gsap } from 'gsap';
+import SplitType from 'split-type';
+
+import Projects from './Projects';
+import Contact from './Contact';
+
+import debs from './images/deba.gif';
+
 import './home.css';
-import githubImg from './images/github.png';
-import code from './images/code.png';
-import phone from './images/phone.png';
-import linkedin from './images/linkedin.png';
-import email from './images/email.png';
 import './sass/style.scss';
-import { dataProp } from '../../type';
-import play from './images/play.png';
 
 export const Home = () => {
-  const data = useRef<dataProp[]>(require('./data.json'));
-  const [onDisplay, setOnDisplay] = useState<dataProp>(data.current[0]);
-  const [Img, setImg] = useState<boolean>(true);
-  const { id, name, img, target, github, live, tags, text } = onDisplay;
+  const [menuState, setMenu] = useState(false);
+
+  const removeMenu = () => {
+    console.log('', menuState);
+    if (menuState) {
+      const menu = document.querySelector('.menu')!;
+      gsap.to(menu, {
+        duration: 1,
+        y: -300,
+        opacity: 0,
+        height: 0,
+      });
+      !menuState && setMenu(false);
+    }
+  };
 
   useEffect(() => {
-    console.log(window.self === window.top);
-    const frame = document.querySelector('iframe')!;
-    // frame.contentWindow!.onload = () => {
-    //   // setImg(false);
-    // };
-  }, [onDisplay]);
-  const settingDisplay = (id: number) => {
-    setOnDisplay(data.current[id]);
-  };
+    document.addEventListener('scroll', removeMenu);
+
+    let ctx = gsap.context(() => {
+      const load = gsap.timeline();
+      const role = new SplitType('.home h1', { types: 'chars' }).chars;
+      load
+        .fromTo(
+          'nav',
+          {
+            yPercent: -100,
+            opacity: 0,
+          },
+          {
+            yPercent: 0,
+            opacity: 1,
+            stagger: 0.05,
+            duration: 1,
+            ease: 'power4.out',
+          }
+        )
+        .fromTo(
+          role,
+          {
+            y: 100,
+            opacity: 0,
+          },
+          {
+            y: 0,
+            opacity: 1,
+            stagger: 0.05,
+            duration: 2,
+            ease: 'power4.out',
+          }
+        );
+
+      const el = document.querySelector('.home')!;
+      // const cursor = document.querySelector('.cursor');
+      const cursorImg = document.querySelector('img.cursor ');
+      const cursorCircle = document.querySelector('div.cursor');
+      const moveCircle = (e: any) => {
+        gsap.to(cursorImg, {
+          duration: 2,
+          css: {
+            left: e.pageX + 50,
+            top: e.pageY + 50,
+          },
+        });
+        gsap.to(cursorCircle, {
+          css: {
+            left: e.pageX,
+            top: e.pageY - 80,
+          },
+        });
+      };
+
+      el.addEventListener('mouseover', () => {
+        gsap.to(cursorImg, {
+          scale: 1,
+          autoAlpha: 0.6,
+          opacity: 0.6,
+        });
+        gsap.to(cursorCircle, {
+          autoAlpha: 0.6,
+        });
+
+        el.addEventListener('mousemove', moveCircle);
+      });
+
+      el.addEventListener('mouseenter', moveCircle);
+      el.addEventListener('mouseout', () => {
+        gsap.to(cursorImg, {
+          scale: 0.3,
+          autoAlpha: 0,
+        });
+        gsap.to(cursorImg, {
+          autoAlpha: 0,
+        });
+      });
+      //
+    });
+
+    return () => ctx.revert(); // eslint-disable-next-line
+  }, []);
   return (
     <div className='body'>
-      <section className='introduction'>
-        <div className='texts'>
-          <div className='h1'>
-            <h1>
-              <span className='hi'>hi, i'm Faith</span>
-              <br />
-              <span>
-                and I'm a <span className='pink'>frontend developer</span>
-                <span className='wave'>👋🏽</span>
-              </span>
-            </h1>
-          </div>
-          <div className='text'>
-            <div className='about'>
-              I have always been fascinated by the ability to transform
-              beautiful web designs into actual websites, hence frontend
-              development was a natural path for me.
-              <br /> <br />
-            </div>
-            <div className='services'>
-              <p className='head'>services</p>
-              <ul>
-                <li>I develop responsive and accessible webpages.</li>
-                <li>I manage and maintain websites.</li>
-                {/*In my free time, I enjoy reading, watching movies or exercising.
-             <li>I manage and maintain websites.</li> */}
-              </ul>
-            </div>
-            <br />
-            <div className='skills'>
-              <div className='technical'>
-                <div className='head'>technical skills</div>
-                <ul>
-                  <li>
-                    <span className='header'>Languages:</span>
-                    <span> Javascript, Typescript, CSS, SASS/SCSS.</span>
-                  </li>
-                  <li>
-                    <span className='header'>Libraries/Tools:</span>
-                    <span>
-                      Gatsby Js, Next Js, React, Bootstrap, Git/Github.
-                    </span>
-                  </li>
-                  <li>
-                    <span className='header'>Concepts:</span>
-                    <span>
-                      GraphQL, Redux Toolkit, RESTful APIs, Context API, API
-                      Implementation.
-                    </span>
-                  </li>
-                </ul>
-              </div>
-              {/* <div className="non-tech">
-                <div className="head">Non-technical skills</div>
-                <ul>
-                  <li className="item">video editing.</li>
-                </ul>
-              </div> */}
-            </div>
-            <br />
-          </div>
-          <ul className='contact'>
-            <li>
-              <a href='mailto:okogbofaith@gmail.com' target='_blank'>
-                <img src={email} />
-              </a>
-            </li>
-            <li>
-              <a href='tel:+2349043126914' target='_blank'>
-                <img src={phone} />
-              </a>
-            </li>
-            <li>
-              <a
-                href='https://www.linkedin.com/in/okogbo-faith'
-                target='_blank'>
-                <img src={linkedin} />
-              </a>
-            </li>
-            <li>
-              <a href='https://github.com/faithandjs' target='_blank'>
-                <img src={githubImg} />
-              </a>
-            </li>
-          </ul>
-        </div>
+      <ul className='menu'>
+        {['home', 'about', 'projects', 'contact'].map((item, key) => (
+          <li key={key}>
+            <a href={`#${item}`} className='underline' onClick={removeMenu}>
+              {item}
+            </a>
+          </li>
+        ))}
+      </ul>
+      <nav>
+        <h4>
+          <button
+            onClick={(e) => {
+              // e.stopPropagation();
+              const menu = document.querySelector('.menu')!;
 
-        <div className='image'>
-          <img src={code} />
+              if (!menuState) {
+                gsap.to(menu, {
+                  duration: 1,
+                  opacity: 1,
+                  y: 0,
+                  height: '250px',
+                });
+              } else {
+                gsap.to(menu, {
+                  duration: 1,
+                  y: -250,
+                  opacity: 0,
+                  height: 0,
+                });
+              }
+              setMenu((p) => !p);
+            }}>
+            Faith Okogbo
+          </button>
+        </h4>
+      </nav>
+      <section className='home' id='home'>
+        <div>
+          <img src={debs} alt='' className='cursor' />
+          <div className='cursor'></div>
+        </div>
+        <h1>
+          FRONTEND <br />
+          DEVELOPER
+        </h1>
+      </section>
+      <section className='about' id='about'>
+        <div className='wrapper'>
+          <div>
+            <h3>About me</h3>
+            {/* I've always been captivated by the art of bringing stunning web
+            designs to life as actual websites and this fascination led me to
+            frontend development. */}
+            I am a detail-oriented, result-driven front-end developer with over
+            2 years of experience in building web applications. Equipped with a
+            degree in computer science, my expertise lies in utilizing popular
+            front-end frameworks and technologies such as React.js, Vue.js, etc.
+            I possess a strong understanding of object-oriented programming
+            principles, allowing me to create responsive, feature-rich, and
+            scalable interfaces for web applications.
+            <br />
+            <br />
+            {/* Frontend development to me is a rewarding cycle of learning and
+            applying knowledge to produce results. While my computer science
+            degree has given me a strong foundation in the basics and equipped
+            me with valuable skills that I apply in my work, I am always open to
+            new challenges and opportunities to learn, grow and expand my
+            skillset. */}
+          </div>
+          <div>
+            <h3>
+              skills ⎻&nbsp;
+              <a href='okogbo-faith-cv.pdf' download className='underline'>
+                Download CV
+              </a>
+            </h3>
+            <ul className='skills'>
+              <li>
+                <span className='header'>Languages:&nbsp;</span>
+                <span> Javascript, Typescript, CSS, SASS/SCSS.</span>
+              </li>
+              <li>
+                <span className='header'>Libraries/Tools:&nbsp;</span>
+                <span>
+                  Gatsby Js, Next Js, React, Vue JS, Bootstrap, Git/Github,
+                  GSAP, Framer Motion, Tailwind.
+                </span>
+              </li>
+              <li>
+                <span className='header'>Concepts:&nbsp;</span>
+                <span>GraphQL, Redux Toolkit, RESTful APIs, Context API.</span>
+              </li>
+            </ul>
+          </div>
         </div>
       </section>
-      <section className='work'>
-        <h2>portfolio</h2>
-        <div className='gallery'>
-          <div className='display-box'>
-            <div className='display'>
-              <div className='img-box1'>
-                <iframe
-                  src={live}
-                  title={name}
-                  frameBorder='0'
-                  sandbox='allow-scripts allow-popups allow-top-navigation-by-user-activation allow-forms allow-same-origin'
-                  allowFullScreen
-                  // scrolling="no"
-                  style={{
-                    width: '100%',
-                    borderRadius: '1px ',
-                    pointerEvents: 'auto',
-                    backgroundColor: 'rgb(25, 25, 25)',
-                  }}></iframe>
-              </div>
-
-              <div className='details'>
-                <div className='top'>
-                  <h3>{name}</h3>
-                  <div className='img-box2'>
-                    <a href={live} target={target}>
-                      <img src={play} alt='github icon' />
-                    </a>
-                  </div>
-                </div>
-                <p>{text}</p>
-                <ul>
-                  {tags.map((item, index) => (
-                    <li key={index}>{item}</li>
-                  ))}
-                </ul>
-              </div>
-            </div>
-          </div>
-          <div className='slider-box'>
-            <div className='slider'>
-              {data.current.map((item, index) => {
-                const { img, name } = item;
-                return (
-                  <img
-                    key={index}
-                    className={`img-box ${id === item.id ? ' selected' : ''} `}
-                    title={name}
-                    onClick={() => settingDisplay(index)}
-                    src={img[0][0]}
-                    alt={'image of' + name + 'website'}
-                  />
-                );
-              })}
-            </div>
-          </div>
-        </div>
-
-        <div className='cv'>
-          <a href='okogbo-faith-cv.pdf' download>
-            Download CV
-          </a>
-        </div>
-      </section>
-
-      <footer className='contact' id='contact'></footer>
+      <Projects />
+      <Contact />
     </div>
   );
 };
