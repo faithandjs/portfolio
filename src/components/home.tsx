@@ -99,7 +99,7 @@ export const Home = () => {
       el.addEventListener('mouseenter', moveCircle);
       el.addEventListener('mouseout', () => {
         gsap.to(cursorImg, {
-          scale: 0.3,
+          scale: 0,
           autoAlpha: 0,
         });
         gsap.to(cursorImg, {

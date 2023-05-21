@@ -164,6 +164,7 @@ img.cursor {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  z-index: 1;
 }
 div.cursor {
   border-radius: 50%;
@@ -171,6 +172,7 @@ div.cursor {
   height: 13px;
   background-color: #ffffff;
   z-index: 3;
+  opacity: 0;
 }
 .cursor {
   transition: none;
