@@ -199,7 +199,7 @@ export const Home = () => {
                 <span className='header'>Libraries/Tools:&nbsp;</span>
                 <span>
                   Gatsby Js, Next Js, React, Vue JS, Bootstrap, Git/Github,
-                  GSAP, Framer Motion, Tailwind.
+                  GSAP, Framer Motion, Tailwind, React Testing Library.
                 </span>
               </li>
               <li>
