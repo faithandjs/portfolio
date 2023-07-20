@@ -247,47 +247,12 @@ div.cursor {
   .cursor {
     height: 5.5rem;
   }
-  .work {
-    .gallery {
-      flex-direction: column;
-      overflow: hidden;
-      .display-box {
-        order: 1;
-        .display {
-          width: 100%;
-          iframe {
-            height: calc(100vh - 400px);
-          }
-        }
-      }
-
-      .slider-box {
-        overflow-x: scroll;
-        width: 100%;
-        margin: 0;
-        order: 0;
-        .slider {
-          width: unset;
-          overflow: scroll;
-
-          @include flex($justify: space-between);
-          margin-bottom: 10px;
-          img {
-            margin: 0 10px;
-            &:first-child {
-              margin-left: 0;
-            }
-            &:last-child {
-              margin-right: 0;
-            }
-          }
-        }
-      }
-    }
-  }
 }
 
 @media only screen and (max-width: 768px) {
+  body {
+    font-size: 18px;
+  }
   .home {
     h1 {
       font-size: 5.5rem;
@@ -309,7 +274,7 @@ div.cursor {
 
 @media only screen and (max-width: 425px) {
   body {
-    font-size: 18px;
+    // font-size: 1px;
   }
   h3,
   a {
@@ -323,14 +288,7 @@ div.cursor {
   .cursor {
     height: 5rem;
   }
-  .work .gallery .slider-box {
-    .slider {
-      img {
-        width: 40vw;
-        margin: 0 15px;
-      }
-    }
-  }
+
   .contact ul li {
     span {
       font-size: 1rem;
