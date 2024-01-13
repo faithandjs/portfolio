@@ -164,9 +164,6 @@ export const Home = () => {
         <div className='wrapper'>
           <div>
             <h3>About me</h3>
-            {/* I've always been captivated by the art of bringing stunning web
-            designs to life as actual websites and this fascination led me to
-            frontend development. */}
             I am a detail-oriented, result-driven front-end developer with over
             2 years of experience in building web applications. Equipped with a
             degree in computer science, my expertise lies in utilizing popular
@@ -176,12 +173,6 @@ export const Home = () => {
             scalable interfaces for web applications.
             <br />
             <br />
-            {/* Frontend development to me is a rewarding cycle of learning and
-            applying knowledge to produce results. While my computer science
-            degree has given me a strong foundation in the basics and equipped
-            me with valuable skills that I apply in my work, I am always open to
-            new challenges and opportunities to learn, grow and expand my
-            skillset. */}
           </div>
           <div>
             <h3>

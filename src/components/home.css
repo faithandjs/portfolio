@@ -1,54 +1,19 @@
-
 @media only screen and (max-width: 560px) {
- 
 }
 @media only screen and (max-width: 360px) {
-  /*.gallery {
-    display: block;
-  } 
-  .img-box {
-    margin: 0 0 2vh 0;
-  }*/
 }
 @media only screen and (max-width: 420px) {
- /* .introduction {
-    font-size: 17px;
-  }*/
 }
 @media only screen and (min-width: 576px) {
- 
 }
 @media only screen and (max-width: 768px) {
-
- 
 }
 @media only screen and (min-width: 768px) {
- /* .introduction img {
-    display: block;
-  }
-  h3 {
-    font-size: 25px;
-  }
-  h4 {
-    font-size: 20px;
-  }
-}*/}
-@media only screen and (min-width: 1000px) {
-
 }
-
+@media only screen and (min-width: 1000px) {
+}
 @supports (-webkit-touch-callout: none) {
-
- /* .work {
-    padding-bottom: 6vh;
-  }
-  .work,
-  .about {
-    position: relative;
-    top: 0px;
-  }
-}*/
 }
 @media only screen and (max-width: 400px) {
-
 }
+

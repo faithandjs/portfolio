@@ -2,10 +2,9 @@ import React from 'react';
 
 import './projects.scss';
 import ProjectCard from './ProjectCard';
+import { data } from '../data';
 
 export default function Index() {
-  const data: dataProp[] = require('../data.json');
-
   return (
     <section className='work' id='projects'>
       <h3>PROJECTS</h3>
