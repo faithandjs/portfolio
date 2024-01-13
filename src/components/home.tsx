@@ -186,8 +186,11 @@ export const Home = () => {
           <div>
             <h3>
               skills ⎻&nbsp;
-              <a href='okogbo-faith-cv.pdf' download className='underline'>
-                Download CV
+              <a
+                href='https://docs.google.com/document/d/1SGbJpa5e20i8mCoEKNFIejwr3G-fYzp3/edit?usp=sharing&ouid=116386074929625487222&rtpof=true&sd=true'
+                target='_blank'
+                className='underline'>
+                See resume
               </a>
             </h3>
             <ul className='skills'>
