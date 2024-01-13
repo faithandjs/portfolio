@@ -3,24 +3,37 @@
 
 .contact {
   flex-direction: column;
-  @include flex();
+  margin-bottom: auto;
+  @include flex($justify: top);
 
+  h3 {
+    margin-top: 200px;
+  }
   .btn-box {
+    margin-top: 20%;
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 1.5em;
   }
   .btn {
-    &:first-child a {
-      background: #d8503f;
+    a {
+      background: rgba($color: #ffffff, $alpha: 0.1);
     }
-    &:nth-child(2) a {
-      background-color: #20921a;
+    &:first-child:hover a {
+      // background: #d8503f;
+      background: rgba($color: #d8503f, $alpha: 0.3);
     }
-    &:nth-child(3)a {
-      background-color: #0077b5;
+    &:nth-child(2):hover a {
+      // background-color: #20921a;
+      background: rgba($color: #20921a, $alpha: 0.3);
     }
-    &:nth-child(4)a {
+    &:nth-child(3):hover a {
+      // background-color: #0077b5;
+      background: rgba($color: #0077b5, $alpha: 0.3);
+    }
+    &:nth-child(4):hover a {
+      background: black;
+      background: rgba($color: #181818, $alpha: 1);
     }
   }
   .btn a {
