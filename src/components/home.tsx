@@ -1,22 +1,22 @@
-import React, { useEffect, useState } from 'react';
-import { gsap } from 'gsap';
-import SplitType from 'split-type';
+import React, { useEffect, useState } from "react";
+import { gsap } from "gsap";
+import SplitType from "split-type";
 
-import Projects from './Projects';
-import Contact from './Contact';
+import Projects from "./Projects";
+import Contact from "./Contact";
 
-import debs from './images/deba.gif';
+import debs from "./images/deba.gif";
 
-import './home.css';
-import './sass/style.scss';
+import "./home.css";
+import "./sass/style.scss";
 
 export const Home = () => {
   const [menuState, setMenu] = useState(false);
 
   const removeMenu = () => {
-    console.log('', menuState);
+    console.log("", menuState);
     if (menuState) {
-      const menu = document.querySelector('.menu')!;
+      const menu = document.querySelector(".menu")!;
       gsap.to(menu, {
         duration: 1,
         y: -300,
@@ -28,14 +28,14 @@ export const Home = () => {
   };
 
   useEffect(() => {
-    document.addEventListener('scroll', removeMenu);
+    document.addEventListener("scroll", removeMenu);
 
     let ctx = gsap.context(() => {
       const load = gsap.timeline();
-      const role = new SplitType('.home h1', { types: 'chars' }).chars;
+      const role = new SplitType(".home h1", { types: "chars" }).chars;
       load
         .fromTo(
-          'nav',
+          "nav",
           {
             yPercent: -100,
             opacity: 0,
@@ -45,7 +45,7 @@ export const Home = () => {
             opacity: 1,
             stagger: 0.05,
             duration: 1,
-            ease: 'power4.out',
+            ease: "power4.out",
           }
         )
         .fromTo(
@@ -59,14 +59,14 @@ export const Home = () => {
             opacity: 1,
             stagger: 0.05,
             duration: 2,
-            ease: 'power4.out',
+            ease: "power4.out",
           }
         );
 
-      const el = document.querySelector('.home')!;
+      const el = document.querySelector(".home")!;
       // const cursor = document.querySelector('.cursor');
-      const cursorImg = document.querySelector('img.cursor ');
-      const cursorCircle = document.querySelector('div.cursor');
+      const cursorImg = document.querySelector("img.cursor ");
+      const cursorCircle = document.querySelector("div.cursor");
       const moveCircle = (e: any) => {
         gsap.to(cursorImg, {
           duration: 2,
@@ -83,7 +83,7 @@ export const Home = () => {
         });
       };
 
-      el.addEventListener('mouseover', () => {
+      el.addEventListener("mouseover", () => {
         gsap.to(cursorImg, {
           scale: 1,
           autoAlpha: 0.6,
@@ -93,11 +93,11 @@ export const Home = () => {
           autoAlpha: 0.6,
         });
 
-        el.addEventListener('mousemove', moveCircle);
+        el.addEventListener("mousemove", moveCircle);
       });
 
-      el.addEventListener('mouseenter', moveCircle);
-      el.addEventListener('mouseout', () => {
+      el.addEventListener("mouseenter", moveCircle);
+      el.addEventListener("mouseout", () => {
         gsap.to(cursorImg, {
           scale: 0,
           autoAlpha: 0,
@@ -112,11 +112,11 @@ export const Home = () => {
     return () => ctx.revert(); // eslint-disable-next-line
   }, []);
   return (
-    <div className='body'>
-      <ul className='menu'>
-        {['about', 'projects', 'contact'].map((item, key) => (
+    <div className="body">
+      <ul className="menu">
+        {["about", "projects", "contact"].map((item, key) => (
           <li key={key}>
-            <a href={`#${item}`} className='underline' onClick={removeMenu}>
+            <a href={`#${item}`} className="underline" onClick={removeMenu}>
               {item}
             </a>
           </li>
@@ -127,14 +127,14 @@ export const Home = () => {
           <button
             onClick={(e) => {
               // e.stopPropagation();
-              const menu = document.querySelector('.menu')!;
+              const menu = document.querySelector(".menu")!;
 
               if (!menuState) {
                 gsap.to(menu, {
                   duration: 1,
                   opacity: 1,
                   y: 0,
-                  height: '250px',
+                  height: "250px",
                 });
               } else {
                 gsap.to(menu, {
@@ -145,23 +145,24 @@ export const Home = () => {
                 });
               }
               setMenu((p) => !p);
-            }}>
+            }}
+          >
             Faith Okogbo
           </button>
         </h4>
       </nav>
-      <section className='home' id='home'>
+      <section className="home" id="home">
         <div>
-          <img src={debs} alt='' className='cursor' />
-          <div className='cursor'></div>
+          <img src={debs} alt="" className="cursor" />
+          <div className="cursor"></div>
         </div>
         <h1>
           FRONTEND <br />
           DEVELOPER
         </h1>
       </section>
-      <section className='about' id='about'>
-        <div className='wrapper'>
+      <section className="about" id="about">
+        <div className="wrapper">
           <div>
             <h3>About me</h3>
             {/* I've always been captivated by the art of bringing stunning web
@@ -187,26 +188,28 @@ export const Home = () => {
             <h3>
               skills ⎻&nbsp;
               <a
-                href='https://docs.google.com/document/d/1SGbJpa5e20i8mCoEKNFIejwr3G-fYzp3/edit?usp=sharing&ouid=116386074929625487222&rtpof=true&sd=true'
-                target='_blank'
-                className='underline'>
+                href="https://docs.google.com/document/d/1SGbJpa5e20i8mCoEKNFIejwr3G-fYzp3/edit?usp=sharing&ouid=116386074929625487222&rtpof=true&sd=true"
+                target="_blank"
+                rel="noreferrer"
+                className="underline"
+              >
                 See resume
               </a>
             </h3>
-            <ul className='skills'>
+            <ul className="skills">
               <li>
-                <span className='header'>Languages:&nbsp;</span>
+                <span className="header">Languages:&nbsp;</span>
                 <span> Javascript, Typescript, CSS, SASS/SCSS.</span>
               </li>
               <li>
-                <span className='header'>Libraries/Tools:&nbsp;</span>
+                <span className="header">Libraries/Tools:&nbsp;</span>
                 <span>
                   Gatsby Js, Next Js, React, Vue JS, Bootstrap, Git/Github,
                   GSAP, Framer Motion, Tailwind, React Testing Library.
                 </span>
               </li>
               <li>
-                <span className='header'>Concepts:&nbsp;</span>
+                <span className="header">Concepts:&nbsp;</span>
                 <span>GraphQL, Redux Toolkit, RESTful APIs, Context API.</span>
               </li>
             </ul>
@@ -218,4 +221,3 @@ export const Home = () => {
     </div>
   );
 };
-

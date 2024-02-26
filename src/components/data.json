@@ -1,6 +1,14 @@
 [
   {
     "id": 1,
+    "name": "Zico Apartments",
+    "img": [{ "0": "./images/zico.png" }],
+    "tags": ["Sanity CMS", "Next Js", "GSAP", "Context API"],
+    "live": "https://zicoapartments.com/",
+    "target": "_blank"
+  },
+  {
+    "id": 1,
     "name": "Vivienne Daniels Store",
     "img": [{ "0": "./images/VD.png" }],
     "tags": [
@@ -67,4 +75,3 @@
     "target": "_blank"
   }
 ]
-
