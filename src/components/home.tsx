@@ -28,6 +28,9 @@ export const Home = () => {
   };
 
   useEffect(() => {
+    if (window.matchMedia("(prefers-color-scheme:dark").matches)
+      document.documentElement.classList.add("dark");
+
     document.addEventListener("scroll", removeMenu);
 
     let ctx = gsap.context(() => {

@@ -1,5 +1,5 @@
-@import '../sass/color';
-@import '../sass/mixin';
+@import "../sass/color";
+@import "../sass/mixin";
 
 .contact {
   flex-direction: column;
@@ -11,7 +11,6 @@
   }
   .btn-box {
     margin-top: 20%;
-
     max-width: 1000px;
     display: grid;
     width: 100%;
@@ -123,4 +122,3 @@
     }
   }
 }
-

@@ -4,8 +4,7 @@ interface dataProp {
   img: { [key: number]: string }[];
   tags: string[];
   text: string;
-  github: string;
+  github?: string;
   live: string;
   target: string;
 }
-
