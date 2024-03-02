@@ -1,47 +1,69 @@
-import React, { useRef, useState } from 'react';
-
-import play from '../images/play.png';
-
-import './projects.scss';
+import React from "react";
+import "./projects.scss";
+import { data } from "../data";
 
 export default function Index() {
-  const data = useRef<dataProp[]>(require('../data.json'));
-  const [onDisplay, setOnDisplay] = useState<dataProp>(data.current[0]);
-
-  const { id, name, img, target, live, tags, text } = onDisplay;
-
   return (
-    <section className='work' id='projects'>
+    <section className="work" id="projects">
       <h3>PROJECTS</h3>
 
-      <div className='gallery'>
-        <div className='display-box'>
-          <div className='display'>
-            <div className='img-box1'>
+      <div className="gallery">
+        {data.map(({ id, name, img, target, live, tags, text }, index) => {
+          return (
+            <div className="card" key={index}>
+              <h4>
+                <a href={live} target={target} className="underline">
+                  {name}
+                </a>
+              </h4>
+              <div className="image-box">
+                <img
+                  title={name}
+                  src={img[0][0]}
+                  alt={"screenshot of " + name + "website"}
+                />
+              </div>
+
+              <div className="details">
+                <p>{text}</p>
+                <ul>
+                  {tags.map((item, index) => (
+                    <li key={index}>{item}</li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+          );
+        })}
+
+        {/* <div className="display-box">
+          <div className="display">
+
+            <div className="img-box1">
               {id === 3 || id === 4 ? (
-                <img src={img[0][1]} alt='' />
+                <img src={img[0][1]} alt="" />
               ) : (
                 <iframe
                   src={live}
                   title={name}
-                  frameBorder='0'
-                  sandbox='allow-scripts allow-popups allow-top-navigation-by-user-activation allow-forms allow-same-origin'
+                  sandbox="allow-scripts allow-popups allow-top-navigation-by-user-activation allow-forms allow-same-origin"
                   allowFullScreen
                   style={{
-                    width: '100%',
-                    borderRadius: '1px ',
-                    pointerEvents: 'auto',
-                    backgroundColor: 'rgb(25, 25, 25)',
-                  }}></iframe>
+                    width: "100%",
+                    borderRadius: "1px ",
+                    pointerEvents: "auto",
+                    backgroundColor: "rgb(25, 25, 25)",
+                  }}
+                ></iframe>
               )}
             </div>
 
-            <div className='details'>
-              <div className='top'>
+            <div className="details">
+              <div className="top">
                 <h3>{name}</h3>
-                <div className='img-box2'>
+                <div className="img-box2">
                   <a href={live} target={target}>
-                    <img src={play} alt='github icon' />
+                    <img src={play} alt="github icon" />
                   </a>
                 </div>
               </div>
@@ -53,8 +75,8 @@ export default function Index() {
               </ul>
             </div>
           </div>
-        </div>
-        <div className='slider-box'>
+        </div> */}
+        {/* <div className='slider-box'>
           <div className='slider'>
             {data.current.map((item, index) => {
               const { img, name } = item;
@@ -78,9 +100,8 @@ export default function Index() {
               );
             })}
           </div>
-        </div>
+        </div> */}
       </div>
     </section>
   );
 }
-

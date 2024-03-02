@@ -4,6 +4,7 @@
     "name": "Zico Apartments",
     "img": [{ "0": "./images/zico.png" }],
     "tags": ["Sanity CMS", "Next Js", "GSAP", "Context API"],
+    "text": "Rental website that uses Sanity CMS as database.",
     "live": "https://zicoapartments.com/",
     "target": "_blank"
   },
@@ -18,7 +19,7 @@
       "context API",
       "Paystack Integration"
     ],
-    "text": "This is an online shopping website I designed and developed. Users can browse products, add multiple quantities of different variants to cart, update their wishlist and checkout items.",
+    "text": "Online shopping website I designed and developed. Users can browse products, add multiple quantities of different variants to cart, update their wishlist and checkout items.",
     "github": "https://github.com/faithandjs/vivienne-daniels-store",
     "live": "https://viviennedanielsstore.netlify.app/",
     "target": "_blank"
@@ -29,7 +30,7 @@
     "name": "My Vision Board",
     "img": [{ "0": "./images/vision_board.png" }],
     "tags": ["SASS", "CSS Grid", "animation", "context API"],
-    "text": "This is vision board application that has the default vision board view and individual goals/visions with details when flipped over .",
+    "text": "Vision board application that has the default vision board view and individual goals/visions with details when flipped over .",
     "github": "https://github.com/faithandjs/vivienne-daniels-store",
     "live": "https://vision-board-2023.netlify.app/",
     "target": "_blank"
@@ -39,7 +40,7 @@
     "name": "Reward.io",
     "img": [{ "0": "./images/reward-io.png", "1": "./images/reward.io.png" }],
     "tags": ["Vue", "typescript", "Desktop only"],
-    "text": "This is a crypto reward website. It is a single page application created with Vue js",
+    "text": "Crypto reward website. It is a single page application created with Vue js",
     "github": "https://github.com/faithandjs/reward.io",
     "live": "https://reward-io.netlify.app/",
     "target": "_blank"
@@ -69,7 +70,7 @@
     "name": "Where in the World",
     "img": [{ "0": "./images/REST-countries-api.jpg" }],
     "tags": ["SASS", "React JS", "Context API", "axios", "typescript"],
-    "text": "This is a website that calls a REST API which returns data about the countries of the world. Users preview diffrent countries' flags and names and can search for countries by name",
+    "text": "website that calls a REST API which returns data about the countries of the world. Users preview diffrent countries' flags and names and can search for countries by name",
     "github": "https://github.com/faithandjs/rest-countries-api",
     "live": "https://fe-rest-countries-api.netlify.app/",
     "target": "_blank"

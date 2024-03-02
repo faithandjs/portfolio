@@ -1,21 +1,22 @@
-@import '../sass/color';
-@import '../sass/mixin';
+@import "../sass/color";
+@import "../sass/mixin";
 
 .contact {
   flex-direction: column;
   margin-bottom: auto;
-  @include flex($justify: top);
+  @include flex($justify: start);
 
   h3 {
     margin-top: 200px;
+    color: #e1e1e1;
   }
   .btn-box {
-    margin-top: 20%;
-
-    max-width: 1000px;
+    margin-top: 13%;
+    max-width: 500px;
     display: grid;
     width: 100%;
-    grid-template-columns: 1fr 1fr;
+    // grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr;
     gap: 1.5em;
   }
   .btn {
@@ -123,4 +124,3 @@
     }
   }
 }
-
