@@ -12,7 +12,7 @@ export default function Index() {
           return (
             <div className="card" key={index}>
               <h4>
-                <a href={live} target={target}>
+                <a href={live} target={target} className="underline">
                   {name}
                 </a>
               </h4>

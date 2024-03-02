@@ -1,31 +1,32 @@
-import React from 'react';
+import React from "react";
 
-import githubImg from '../images/github.png';
-import phone from '../images/phone.png';
-import linkedin from '../images/linkedin.png';
-import email from '../images/email.png';
+import githubImg from "../images/github.png";
+import phone from "../images/phone.png";
+import linkedin from "../images/linkedin.png";
+import email from "../images/email.png";
 
-import './contact.scss';
+import "./contact.scss";
 
 export default function Index() {
   return (
-    <section className='contact' id='contact'>
+    <section className="contact" id="contact">
       <h3>Contact me</h3>
 
-      <div className='btn-box'>
-        <button className='btn'>
+      <div className="btn-box">
+        <button className="btn">
           <a
-            href='mailto:okogbofaith@gmail.com'
-            target='_blank'
-            rel='noreferrer'>
-            <span className='details'>
+            href="mailto:okogbofaith@gmail.com"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <span className="details">
               <span> Email</span> <span>okogbofaith@gmail.com</span>
             </span>
 
-            <img src={email} alt='email icon' />
+            <img src={email} alt="email icon" />
           </a>
         </button>
-        <button className='btn'>
+        {/* <button className='btn'>
           <a href='tel:+2348172994910' target='_blank' rel='noreferrer'>
             <span className='details'>
               <span> Phone</span>
@@ -33,32 +34,33 @@ export default function Index() {
             </span>
             <img src={phone} alt='phone icon' />
           </a>
-        </button>
-        <button className='btn'>
+        </button> */}
+        <button className="btn">
           <a
-            href='https://www.linkedin.com/in/okogbo-faith'
-            target='_blank'
-            rel='noreferrer'>
-            <span className='details'>
+            href="https://www.linkedin.com/in/okogbo-faith"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <span className="details">
               <span> LinkedIn</span> <span>Okogbo Faith</span>
             </span>
-            <img src={linkedin} alt='linkedin logo' />
+            <img src={linkedin} alt="linkedin logo" />
           </a>
         </button>
-        <button className='btn'>
+        <button className="btn">
           <a
-            href='https://github.com/faithandjs'
-            target='_blank'
-            rel='noreferrer'>
-            <span className='details'>
+            href="https://github.com/faithandjs"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <span className="details">
               <span> Github</span>
               <span>faithandjs</span>
             </span>
-            <img src={githubImg} alt='github logo' />
+            <img src={githubImg} alt="github logo" />
           </a>
         </button>
       </div>
     </section>
   );
 }
-

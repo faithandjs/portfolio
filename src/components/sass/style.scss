@@ -71,7 +71,11 @@ section {
     background-color: transparent;
   }
 }
-
+@media screen and (max-width: 768px) {
+  section {
+    min-height: 50vh;
+  }
+}
 h3,
 h3 a {
   text-transform: uppercase;
@@ -168,6 +172,12 @@ nav {
     text-align: center;
     padding-bottom: 10vh;
     font-size: 12rem;
+    // color: $main;
+    // -webkit-text-fill-color: transparent;
+    // background: $lg;
+    // // background: linear-gradient(to right, red, blue);
+    // background-clip: text;
+    // -webkit-background-clip: text;
   }
 }
 img.cursor {

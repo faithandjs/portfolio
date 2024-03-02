@@ -11,20 +11,28 @@
     padding: 4rem 2rem 0;
     max-width: 1800px;
     display: grid;
-    gap: 6rem 4rem;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 10rem;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  @media screen and (max-width: 768px) {
+    .gallery {
+      grid-template-columns: repeat(1, minmax(0, 1fr));
+      gap: 6rem;
+    }
   }
   .card {
     h4 {
       font-weight: bold;
-      padding-bottom: 1rem;
       font-size: 1.4rem;
       text-transform: uppercase;
-      &:hover a {
-        color: $main;
+      padding-bottom: 1rem;
+      a {
+        text-transform: uppercase;
       }
     }
-
+    a.underline::after {
+      top: 100%;
+    }
     .image-box {
       height: 300px;
       overflow: hidden;
