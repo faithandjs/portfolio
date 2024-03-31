@@ -1,11 +1,12 @@
 import React from "react";
 
-import githubImg from "../images/github.png";
-import phone from "../images/phone.png";
-import linkedin from "../images/linkedin.png";
-import email from "../images/email.png";
+import githubImg from "../../assets/github.png";
+import phone from "../../assets/phone.png";
+import linkedin from "../../assets/linkedin.png";
+import email from "../../assets/email.png";
 
 import "./contact.scss";
+import { data } from "../data";
 
 export default function Index() {
   return (
@@ -15,7 +16,7 @@ export default function Index() {
       <div className="btn-box">
         <button className="btn">
           <a
-            href="mailto:okogbofaith@gmail.com"
+            href={`mailto:${data.contact.mail}`}
             target="_blank"
             rel="noreferrer"
           >
@@ -26,21 +27,17 @@ export default function Index() {
             <img src={email} alt="email icon" />
           </a>
         </button>
-        {/* <button className='btn'>
-          <a href='tel:+2348172994910' target='_blank' rel='noreferrer'>
-            <span className='details'>
+        {/* <button className="btn">
+          <a href="tel:+2348172994910" target="_blank" rel="noreferrer">
+            <span className="details">
               <span> Phone</span>
-              <span>+2348172994910</span>
+              <span>+</span>
             </span>
-            <img src={phone} alt='phone icon' />
+            <img src={phone} alt="phone icon" />
           </a>
         </button> */}
         <button className="btn">
-          <a
-            href="https://www.linkedin.com/in/okogbo-faith"
-            target="_blank"
-            rel="noreferrer"
-          >
+          <a href={data.contact.linkedin} target="_blank" rel="noreferrer">
             <span className="details">
               <span> LinkedIn</span> <span>Okogbo Faith</span>
             </span>
@@ -48,11 +45,7 @@ export default function Index() {
           </a>
         </button>
         <button className="btn">
-          <a
-            href="https://github.com/faithandjs"
-            target="_blank"
-            rel="noreferrer"
-          >
+          <a href={data.contact.github} target="_blank" rel="noreferrer">
             <span className="details">
               <span> Github</span>
               <span>faithandjs</span>

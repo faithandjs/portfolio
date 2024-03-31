@@ -5,7 +5,9 @@ import SplitType from "split-type";
 import Projects from "./Projects";
 import Contact from "./Contact";
 
-import debs from "./images/deba.gif";
+import { data } from "./data";
+
+import debs from "../assets/deba.gif";
 
 import "./home.css";
 import "./sass/style.scss";
@@ -14,7 +16,6 @@ export const Home = () => {
   const [menuState, setMenu] = useState(false);
 
   const removeMenu = () => {
-    console.log("", menuState);
     if (menuState) {
       const menu = document.querySelector(".menu")!;
       gsap.to(menu, {
@@ -114,6 +115,7 @@ export const Home = () => {
 
     return () => ctx.revert(); // eslint-disable-next-line
   }, []);
+
   return (
     <div className="body">
       <ul className="menu">
@@ -129,7 +131,7 @@ export const Home = () => {
         <h4>
           <button
             onClick={(e) => {
-              // e.stopPropagation();
+              e.stopPropagation();
               const menu = document.querySelector(".menu")!;
 
               if (!menuState) {
@@ -168,30 +170,15 @@ export const Home = () => {
         <div className="wrapper">
           <div>
             <h3>About me</h3>
-            {/* I've always been captivated by the art of bringing stunning web
-            designs to life as actual websites and this fascination led me to
-            frontend development. */}
-            I am a detail-oriented, result-driven front-end developer with over
-            2 years of experience in building web applications. Equipped with a
-            degree in computer science, my expertise lies in utilizing popular
-            front-end frameworks and technologies such as React.js, Vue.js, etc.
-            I possess a strong understanding of object-oriented programming
-            principles, allowing me to create responsive, feature-rich, and
-            scalable interfaces for web applications.
+            {data.about}
             <br />
             <br />
-            {/* Frontend development to me is a rewarding cycle of learning and
-            applying knowledge to produce results. While my computer science
-            degree has given me a strong foundation in the basics and equipped
-            me with valuable skills that I apply in my work, I am always open to
-            new challenges and opportunities to learn, grow and expand my
-            skillset. */}
           </div>
           <div>
             <h3>
               skills ⎻&nbsp;
               <a
-                href="https://docs.google.com/document/d/1SGbJpa5e20i8mCoEKNFIejwr3G-fYzp3/edit?usp=sharing&ouid=116386074929625487222&rtpof=true&sd=true"
+                href={data.resume}
                 target="_blank"
                 rel="noreferrer"
                 className="underline"
@@ -202,18 +189,15 @@ export const Home = () => {
             <ul className="skills">
               <li>
                 <span className="header">Languages:&nbsp;</span>
-                <span> Javascript, Typescript, CSS, SASS/SCSS.</span>
+                <span>{data.skills.languages.join(", ")}.</span>
               </li>
               <li>
                 <span className="header">Libraries/Tools:&nbsp;</span>
-                <span>
-                  Gatsby Js, Next Js, React, Vue JS, Bootstrap, Git/Github,
-                  GSAP, Framer Motion, Tailwind, React Testing Library.
-                </span>
+                <span>{data.skills.tools.join(", ")}.</span>
               </li>
               <li>
                 <span className="header">Concepts:&nbsp;</span>
-                <span>GraphQL, Redux Toolkit, RESTful APIs, Context API.</span>
+                <span>{data.skills.concepts.join(", ")}.</span>
               </li>
             </ul>
           </div>

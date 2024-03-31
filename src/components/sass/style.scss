@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Rubik+Puddles&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap");
 @import url("https://fonts.cdnfonts.com/css/castlery");
-// @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
 @import "color.scss";
 @import "mixin.scss";
 
@@ -13,8 +13,6 @@
   box-sizing: border-box;
   padding: 0;
   color: #e1e1e1;
-  // transition: all 0.2s ease-out;
-  // font-family: "Montserrat", sans-serif;
   font-family: "Cormorant Garamond", serif;
 }
 
@@ -33,16 +31,6 @@ button {
 
 html {
   background-color: #02000c;
-  // background-color: #dfdfdf;
-  // * {
-  //   color: #02000c;
-  // }
-  // &.dark {
-  //   background-color: #02000c;
-  //   * {
-  //     color: #e1e1e1;
-  //   }
-  // }
   scroll-behavior: smooth;
   font-size: 16px;
   ::-webkit-scrollbar {
@@ -56,7 +44,6 @@ html {
 
 body {
   min-width: 310px;
-  // background-color: #02000c;
   background-attachment: fixed;
 }
 section {
@@ -82,7 +69,6 @@ h3 a {
   font-weight: 900;
   font-size: 3rem;
   color: $main;
-  // font-family: Georgia, 'Times New Roman', Times, serif;
   padding: 1.2rem 0;
   line-height: 0.95;
   letter-spacing: 0.02em;
@@ -172,12 +158,6 @@ nav {
     text-align: center;
     padding-bottom: 10vh;
     font-size: 12rem;
-    // color: $main;
-    // -webkit-text-fill-color: transparent;
-    // background: $lg;
-    // // background: linear-gradient(to right, red, blue);
-    // background-clip: text;
-    // -webkit-background-clip: text;
   }
 }
 img.cursor {
@@ -201,9 +181,6 @@ div.cursor {
   transition: none;
   pointer-events: none;
   position: absolute;
-  // top: 50%;
-  // left: 50%;
-  // transform: translate(-50%, -50%);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -333,10 +310,6 @@ div.cursor {
 @media only screen and (max-width: 425px) {
   body {
     font-size: 18px;
-  }
-  h3,
-  a {
-    // font-size: 2.3rem;
   }
   .home {
     h1 {

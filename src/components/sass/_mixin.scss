@@ -6,7 +6,7 @@
 }
 
 @mixin after($w: 100%, $h: 100%, $t: 0, $b: 0, $l: 0, $r: 0) {
-  content: '';
+  content: "";
   position: absolute;
   left: $l;
   right: $r;
@@ -15,4 +15,3 @@
   width: $w;
   height: $h;
 }
-
