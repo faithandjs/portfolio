@@ -7,7 +7,7 @@ export const data = {
       "Gatsby Js",
       "Next Js",
       "React",
-      "Three Js",
+      // "Three Js",
       "GSAP",
       "Bootstrap",
       "Tailwind",
