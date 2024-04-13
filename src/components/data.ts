@@ -24,7 +24,7 @@ export const data = {
     github: "https://github.com/faithandjs",
   },
   resume:
-    "https://docs.google.com/document/d/1SGbJpa5e20i8mCoEKNFIejwr3G-fYzp3/edit?usp=sharing&ouid=116386074929625487222&rtpof=true&sd=true",
+    "https://drive.google.com/file/d/1267KxnmSk5Fi0kEnbn2U_WkupigR1QWT/view?usp=sharing",
   projects: [
     {
       id: 1,

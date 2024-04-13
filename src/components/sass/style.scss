@@ -60,7 +60,7 @@ section {
 }
 @media screen and (max-width: 768px) {
   section {
-    min-height: 50vh;
+    // min-height: 70vh;
   }
 }
 h3,
@@ -190,6 +190,8 @@ div.cursor {
 
 .about {
   font-size: 2rem;
+  max-width: 1800px;
+  margin: auto;
   .wrapper {
     display: grid;
     width: 100%;
@@ -288,6 +290,10 @@ div.cursor {
 }
 
 @media only screen and (max-width: 768px) {
+  h3,
+  h3 a {
+    font-size: 2.3rem;
+  }
   .home {
     h1 {
       font-size: 5.5rem;
@@ -300,6 +306,13 @@ div.cursor {
     .wrapper {
       display: flex;
       flex-direction: column;
+      row-gap: 10px;
+      p {
+        font-size: 1.5rem;
+      }
+    }
+    ul li {
+      font-size: 1.5rem;
     }
   }
   .work .display-box .display .img-box1 {

@@ -170,7 +170,7 @@ export const Home = () => {
         <div className="wrapper">
           <div>
             <h3>About me</h3>
-            {data.about}
+            <p>{data.about}</p>
             <br />
             <br />
           </div>
