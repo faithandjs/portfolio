@@ -177,12 +177,12 @@ export const Home = () => {
           <div>
             <h3>
               skills ⎻&nbsp;
-              <a
-                href={data.resume}
+              {/* <a 
                 target="_blank"
                 rel="noreferrer"
                 className="underline"
-              >
+              > */}
+              <a href="okogbo-faith-cv.pdf" className="underline" download>
                 See resume
               </a>
             </h3>
